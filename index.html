@@ -1,2515 +1,2491 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<meta name="description"
+content="MOOD Corporation — Less Noise. More Mood. Moda urbana premium em Angola.">
 
-  <meta name="description"
-        content="MOOD Corporation — Less Noise. More Mood. Moda urbana premium em Angola.">
+<meta name="theme-color" content="#6B1F32">
 
-  <meta name="theme-color" content="#3A2118">
+<title>MOOD — Less Noise. More Mood.</title>
+
+<style>
 
-  <title>MOOD — Less Noise. More Mood.</title>
+/* =====================================================
+   MOOD CORPORATION
+   VINHO STONE — PREMIUM EDITION
+===================================================== */
 
-  <style>
+:root{
+  --wine-dark:#260912;
+  --wine-deep:#3B0D1A;
+  --wine:#6B1F32;
+  --wine-medium:#7E2940;
+  --wine-light:#963B52;
+
+  --onyx:#0B0B0C;
+  --onyx-soft:#151416;
+
+  --beige:#D9C2A6;
+  --sand:#E8D7C2;
+  --cream:#F5EDE3;
+  --cream-light:#FCF8F2;
+
+  --ocean:#124E68;
+  --ocean-light:#236982;
+
+  --text:#F5EDE3;
+  --muted:#CDB9B0;
+
+  --border:rgba(245,237,227,.18);
+
+  --max-width:1250px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--wine);
+  color:var(--text);
+  line-height:1.5;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+
+  background:rgba(38,9,18,.94);
+  backdrop-filter:blur(15px);
+
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  max-width:var(--max-width);
+  margin:auto;
+  height:76px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 25px;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:900;
+  letter-spacing:6px;
+}
+
+.menu{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+.menu a{
+  font-size:12px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--muted);
+  transition:.3s;
+}
+
+.menu a:hover{
+  color:var(--cream);
+}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.icon-btn{
+  background:none;
+  border:none;
+  color:var(--cream);
+  font-size:20px;
+  cursor:pointer;
+}
+
+.cart-count{
+  position:absolute;
+  background:var(--beige);
+  color:var(--wine-dark);
+
+  font-size:9px;
+  font-weight:bold;
+
+  width:17px;
+  height:17px;
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-left:14px;
+  margin-top:-25px;
+}
+
+.mobile-menu{
+  display:none;
+  font-size:25px;
+  background:none;
+  border:none;
+  color:var(--cream);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+
+  padding:130px 25px 80px;
+
+  background:
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(150,59,82,.38),
+      transparent 40%
+    ),
+    var(--wine-dark);
+}
+
+.hero-container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:60px;
+  align-items:center;
+}
+
+.hero-text{
+  max-width:600px;
+}
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+
+  color:var(--beige);
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(55px,8vw,110px);
+  line-height:.9;
+  letter-spacing:-5px;
+  margin-bottom:30px;
+}
+
+.hero h1 span{
+  display:block;
+  color:var(--beige);
+}
+
+.hero p{
+  max-width:450px;
+  color:var(--muted);
+  font-size:16px;
+  margin-bottom:35px;
+}
 
-    /* =====================================================
-       MOOD CORPORATION — VERSION 2
-       PREMIUM BROWN EDITION
-    ===================================================== */
+.primary-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 
-    :root {
-      --brown-dark: #24130e;
-      --brown: #3a2118;
-      --brown-medium: #513126;
-      --brown-light: #704737;
+  padding:15px 28px;
 
-      --cream: #f3eadc;
-      --cream-light: #fbf6ee;
-      --beige: #d8c5ae;
+  background:var(--cream);
+  color:var(--wine-dark);
+
+  border:none;
 
-      --text: #f5eee5;
-      --muted: #c8b8a8;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
 
-      --border: rgba(243, 234, 220, 0.18);
+  cursor:pointer;
+  transition:.3s;
+}
 
-      --max-width: 1250px;
-    }
+.primary-btn:hover{
+  transform:translateY(-3px);
+  background:white;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+.secondary-btn{
+  display:inline-flex;
 
-    html {
-      scroll-behavior: smooth;
-    }
+  padding:14px 25px;
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--brown);
-      color: var(--text);
-      line-height: 1.5;
-    }
+  border:1px solid var(--border);
+  color:var(--cream);
+
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  margin-left:10px;
+  transition:.3s;
+}
+
+.secondary-btn:hover{
+  background:rgba(255,255,255,.08);
+}
+
+.hero-image{
+  min-height:600px;
 
-    img {
-      width: 100%;
-      display: block;
-    }
+  background:
+    linear-gradient(
+      rgba(107,31,50,.12),
+      rgba(38,9,18,.42)
+    ),
+    url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+  border-radius:2px;
+  position:relative;
+}
+
+.hero-label{
+  position:absolute;
+
+  bottom:25px;
+  left:25px;
+
+  background:rgba(38,9,18,.88);
+
+  padding:14px 18px;
+
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =====================================================
+   MARQUEE
+===================================================== */
+
+.marquee{
+  overflow:hidden;
+
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+
+  padding:18px 0;
+
+  white-space:nowrap;
+
+  background:var(--wine);
+}
+
+.marquee-track{
+  display:inline-block;
+
+  animation:marquee 25s linear infinite;
+
+  font-size:12px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+
+  color:var(--sand);
+}
+
+@keyframes marquee{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section{
+  padding:100px 25px;
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:auto;
+}
+
+.section-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+
+  margin-bottom:45px;
+  gap:20px;
+}
+
+.section-title{
+  font-size:clamp(35px,5vw,60px);
+  line-height:1;
+  letter-spacing:-2px;
+}
+
+.section-description{
+  max-width:400px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+
+/* =====================================================
+   MOOD COLOR EDIT
+===================================================== */
+
+.color-section{
+  background:var(--onyx);
+}
+
+.color-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.color-image{
+  overflow:hidden;
+  background:var(--onyx-soft);
+  border:1px solid var(--border);
+}
+
+.color-image img{
+  width:100%;
+  height:auto;
+}
+
+.color-content h2{
+  font-size:clamp(42px,6vw,75px);
+  line-height:.95;
+  margin-bottom:25px;
+}
+
+.color-content h2 span{
+  color:var(--beige);
+}
+
+.color-content p{
+  color:var(--muted);
+  max-width:500px;
+  margin-bottom:30px;
+}
+
+.palette{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.palette-card{
+  border:1px solid var(--border);
+  padding:18px;
+  background:rgba(255,255,255,.025);
+  transition:.3s;
+}
+
+.palette-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(245,237,227,.35);
+}
+
+.swatch{
+  width:100%;
+  height:70px;
+  margin-bottom:15px;
+}
+
+.swatch.beige{
+  background:#D9C2A6;
+}
+
+.swatch.onyx{
+  background:#0B0B0C;
+  border:1px solid #333;
+}
+
+.swatch.wine{
+  background:#6B1F32;
+}
+
+.swatch.ocean{
+  background:#124E68;
+}
+
+.palette-name{
+  font-size:13px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+
+.palette-code{
+  font-size:10px;
+  color:var(--muted);
+  letter-spacing:1px;
+}
+
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.category{
+  height:330px;
+  position:relative;
+  overflow:hidden;
+  background:var(--wine-dark);
+}
+
+.category img{
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s;
+}
+
+.category:hover img{
+  transform:scale(1.05);
+}
+
+.category-overlay{
+  position:absolute;
+  inset:0;
+
+  display:flex;
+  align-items:end;
+
+  padding:25px;
+
+  background:
+    linear-gradient(
+      transparent 35%,
+      rgba(38,9,18,.92)
+    );
+}
+
+.category-title{
+  font-size:20px;
+  letter-spacing:1px;
+}
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+.filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:35px;
+}
+
+.filter-btn{
+  padding:10px 18px;
+
+  border:1px solid var(--border);
+
+  background:transparent;
+  color:var(--muted);
+
+  cursor:pointer;
+
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+  background:var(--cream);
+  color:var(--wine-dark);
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.product{
+  position:relative;
+}
+
+.product-image{
+  aspect-ratio:.82;
+  background:var(--wine-dark);
+  overflow:hidden;
+  position:relative;
+}
+
+.product-image img{
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.product:hover .product-image img{
+  transform:scale(1.04);
+}
+
+.product-tag{
+  position:absolute;
+
+  top:12px;
+  left:12px;
+
+  background:var(--beige);
+  color:var(--wine-dark);
+
+  padding:7px 10px;
+
+  font-size:9px;
+  font-weight:bold;
+  letter-spacing:1px;
+
+  z-index:2;
+}
+
+.product-info{
+  padding:15px 0;
+}
+
+.product-name{
+  font-size:14px;
+  margin-bottom:5px;
+}
+
+.product-price{
+  color:var(--beige);
+  font-size:14px;
+  font-weight:bold;
+}
+
+.product-category{
+  color:var(--muted);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-top:5px;
+}
+
+.add-cart{
+  width:100%;
+  padding:11px;
+  margin-top:12px;
+
+  border:1px solid var(--border);
+
+  background:transparent;
+  color:var(--cream);
+
+  cursor:pointer;
+
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.add-cart:hover{
+  background:var(--cream);
+  color:var(--wine-dark);
+}
+
+
+/* =====================================================
+   THE MOOD / NEW DROP
+===================================================== */
+
+.mood-section{
+  background:var(--wine-dark);
+}
+
+.mood-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.mood-image{
+  min-height:650px;
+
+  background:
+    linear-gradient(
+      rgba(107,31,50,.08),
+      rgba(38,9,18,.25)
+    ),
+    url("https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+}
+
+.mood-text h2{
+  font-size:clamp(45px,6vw,80px);
+  line-height:.95;
+  margin-bottom:30px;
+}
+
+.mood-text h2 span{
+  color:var(--beige);
+}
+
+.mood-text p{
+  color:var(--muted);
+  max-width:470px;
+  margin-bottom:20px;
+}
+
+.quote{
+  border-left:2px solid var(--beige);
+  padding-left:20px;
+  margin-top:35px;
+  font-size:18px;
+  color:var(--cream);
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about{
+  text-align:center;
+}
+
+.about-content{
+  max-width:800px;
+  margin:auto;
+}
+
+.about h2{
+  font-size:clamp(45px,7vw,85px);
+  margin-bottom:30px;
+}
+
+.about p{
+  color:var(--muted);
+  font-size:17px;
+  margin-bottom:20px;
+}
+
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+
+.newsletter{
+  background:var(--cream);
+  color:var(--wine-dark);
+  text-align:center;
+}
+
+.newsletter h2{
+  font-size:clamp(35px,5vw,60px);
+  margin-bottom:15px;
+}
+
+.newsletter p{
+  color:#72545D;
+  margin-bottom:30px;
+}
+
+.newsletter-form{
+  display:flex;
+  max-width:550px;
+  margin:auto;
+}
+
+.newsletter-form input{
+  flex:1;
+  padding:16px;
+
+  border:1px solid #C5AFA3;
+
+  background:transparent;
+  outline:none;
+}
+
+.newsletter-form button{
+  padding:16px 25px;
+
+  border:none;
+
+  background:var(--wine-dark);
+  color:var(--cream);
+
+  cursor:pointer;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+.contact-info h2{
+  font-size:55px;
+  line-height:1;
+  margin-bottom:25px;
+}
+
+.contact-info p{
+  color:var(--muted);
+  max-width:400px;
+}
+
+.contact-details{
+  margin-top:35px;
+}
+
+.contact-details div{
+  margin-bottom:15px;
+  color:var(--beige);
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:16px;
+
+  background:rgba(0,0,0,.08);
+
+  border:1px solid var(--border);
+
+  color:var(--cream);
+  outline:none;
+
+  font-family:inherit;
+}
+
+.contact-form textarea{
+  height:150px;
+  resize:vertical;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+  background:var(--onyx);
+
+  border-top:1px solid var(--border);
+
+  padding:60px 25px 25px;
+}
+
+.footer-grid{
+  max-width:var(--max-width);
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+
+  gap:40px;
+}
+
+.footer-logo{
+  font-size:30px;
+  font-weight:900;
+  letter-spacing:6px;
+  margin-bottom:15px;
+}
+
+.footer-description{
+  color:var(--muted);
+  max-width:300px;
+  font-size:13px;
+}
+
+.footer-column h4{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+
+.footer-column a{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:10px;
+}
+
+.footer-column a:hover{
+  color:var(--cream);
+}
+
+.copyright{
+  max-width:var(--max-width);
+  margin:50px auto 0;
+
+  padding-top:20px;
+
+  border-top:1px solid var(--border);
+
+  color:#927780;
+
+  font-size:11px;
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp{
+  position:fixed;
+
+  right:20px;
+  bottom:20px;
+
+  width:58px;
+  height:58px;
+
+  border-radius:50%;
+
+  background:#25D366;
+  color:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:25px;
+
+  z-index:999;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+.cart-panel{
+  position:fixed;
+
+  top:0;
+  right:-420px;
+
+  width:min(420px,100%);
+  height:100vh;
+
+  background:var(--cream);
+  color:var(--wine-dark);
 
-    button {
-      font-family: inherit;
-    }
+  z-index:2000;
 
+  padding:25px;
 
-    /* =====================================================
-       HEADER
-    ===================================================== */
+  transition:.4s;
 
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
+  box-shadow:-10px 0 40px rgba(0,0,0,.3);
+}
 
-      background: rgba(36, 19, 14, 0.94);
-      backdrop-filter: blur(15px);
+.cart-panel.open{
+  right:0;
+}
 
-      border-bottom: 1px solid var(--border);
-    }
+.cart-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-    .nav {
-      max-width: var(--max-width);
-      margin: auto;
+  padding-bottom:20px;
 
-      height: 76px;
+  border-bottom:1px solid #D5C5B5;
+}
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+.cart-header h2{
+  font-size:25px;
+}
 
-      padding: 0 25px;
-    }
+.close-cart{
+  border:none;
+  background:none;
+  font-size:25px;
+  cursor:pointer;
+}
 
-    .logo {
-      font-size: 30px;
-      font-weight: 900;
-      letter-spacing: 6px;
-    }
+.cart-items{
+  padding:25px 0;
 
-    .menu {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
+  max-height:65vh;
+  overflow-y:auto;
+}
 
-    .menu a {
-      font-size: 12px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+.cart-item{
+  display:flex;
+  justify-content:space-between;
 
-      color: var(--muted);
+  gap:15px;
 
-      transition: 0.3s;
-    }
+  border-bottom:1px solid #DDD0C2;
 
-    .menu a:hover {
-      color: var(--cream);
-    }
+  padding:15px 0;
+}
 
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
+.cart-item-name{
+  font-size:14px;
+  font-weight:bold;
+}
 
-    .icon-btn {
-      background: none;
-      border: none;
+.cart-item-price{
+  font-size:13px;
+  color:#765E4E;
+}
 
-      color: var(--cream);
+.remove-item{
+  border:none;
+  background:none;
+  cursor:pointer;
+  color:#8A6655;
+  font-size:12px;
+}
 
-      font-size: 20px;
+.cart-total{
+  border-top:1px solid #D5C5B5;
 
-      cursor: pointer;
-    }
+  padding-top:20px;
 
-    .cart-count {
-      position: absolute;
+  display:flex;
+  justify-content:space-between;
 
-      background: var(--cream);
-      color: var(--brown-dark);
+  font-weight:bold;
 
-      font-size: 9px;
-      font-weight: bold;
+  margin-bottom:20px;
+}
 
-      width: 17px;
-      height: 17px;
+.checkout{
+  width:100%;
+  padding:16px;
 
-      border-radius: 50%;
+  border:none;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  background:var(--wine-dark);
+  color:var(--cream);
 
-      margin-left: 14px;
-      margin-top: -25px;
-    }
+  cursor:pointer;
 
-    .mobile-menu {
-      display: none;
-      font-size: 25px;
-      background: none;
-      border: none;
-      color: var(--cream);
-    }
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
 
 
-    /* =====================================================
-       HERO
-    ===================================================== */
+/* =====================================================
+   MOBILE
+===================================================== */
 
-    .hero {
-      min-height: 100vh;
+@media(max-width:900px){
 
-      display: flex;
-      align-items: center;
+  .menu{
+    position:fixed;
 
-      padding: 130px 25px 80px;
+    top:76px;
+    left:0;
 
-      background:
-        radial-gradient(
-          circle at 70% 30%,
-          rgba(112, 71, 55, 0.45),
-          transparent 40%
-        ),
-        var(--brown-dark);
-    }
+    width:100%;
 
-    .hero-container {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: auto;
+    background:var(--wine-dark);
 
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    display:none;
+    flex-direction:column;
 
-      gap: 60px;
+    padding:30px 25px;
 
-      align-items: center;
-    }
+    border-bottom:1px solid var(--border);
+  }
 
-    .hero-text {
-      max-width: 600px;
-    }
+  .menu.active{
+    display:flex;
+  }
 
-    .eyebrow {
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
+  .mobile-menu{
+    display:block;
+  }
 
-      color: var(--beige);
+  .hero-container,
+  .mood-grid,
+  .contact-grid,
+  .color-grid{
+    grid-template-columns:1fr;
+  }
 
-      margin-bottom: 20px;
-    }
+  .hero-image{
+    min-height:500px;
+  }
 
-    .hero h1 {
-      font-size: clamp(55px, 8vw, 110px);
+  .categories{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-      line-height: 0.9;
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-      letter-spacing: -5px;
+  .footer-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-      margin-bottom: 30px;
-    }
+}
 
-    .hero h1 span {
-      display: block;
-      color: var(--beige);
-    }
+@media(max-width:550px){
 
-    .hero p {
-      max-width: 450px;
+  .nav{
+    padding:0 18px;
+  }
 
-      color: var(--muted);
+  .logo{
+    font-size:23px;
+    letter-spacing:4px;
+  }
 
-      font-size: 16px;
+  section{
+    padding:75px 18px;
+  }
 
-      margin-bottom: 35px;
-    }
+  .hero{
+    padding-left:18px;
+    padding-right:18px;
+  }
 
-    .primary-btn {
-      display: inline-flex;
+  .hero h1{
+    font-size:58px;
+  }
 
-      align-items: center;
-      justify-content: center;
+  .hero-image{
+    min-height:430px;
+  }
 
-      padding: 15px 28px;
+  .categories{
+    grid-template-columns:1fr;
+  }
 
-      background: var(--cream);
-      color: var(--brown-dark);
+  .category{
+    height:380px;
+  }
 
-      border: none;
+  .products{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
 
-      font-size: 12px;
-      font-weight: bold;
+  .product-name{
+    font-size:12px;
+  }
 
-      letter-spacing: 2px;
-      text-transform: uppercase;
+  .product-price{
+    font-size:12px;
+  }
 
-      cursor: pointer;
+  .section-header{
+    display:block;
+  }
 
-      transition: 0.3s;
-    }
+  .section-description{
+    margin-top:15px;
+  }
 
-    .primary-btn:hover {
-      transform: translateY(-3px);
-      background: white;
-    }
+  .mood-image{
+    min-height:450px;
+  }
 
-    .secondary-btn {
-      display: inline-flex;
+  .newsletter-form{
+    flex-direction:column;
+    gap:10px;
+  }
 
-      padding: 14px 25px;
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
 
-      border: 1px solid var(--border);
+  .palette{
+    grid-template-columns:1fr;
+  }
 
-      color: var(--cream);
+}
 
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-
-      margin-left: 10px;
-
-      transition: 0.3s;
-    }
-
-    .secondary-btn:hover {
-      background: rgba(255,255,255,0.08);
-    }
-
-    .hero-image {
-      min-height: 600px;
-
-      background:
-        linear-gradient(
-          rgba(58,33,24,0.15),
-          rgba(36,19,14,0.35)
-        ),
-        url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
-
-      border-radius: 2px;
-
-      position: relative;
-    }
-
-    .hero-label {
-      position: absolute;
-
-      bottom: 25px;
-      left: 25px;
-
-      background: rgba(36,19,14,0.85);
-
-      padding: 14px 18px;
-
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-
-    /* =====================================================
-       MARQUEE
-    ===================================================== */
-
-    .marquee {
-      overflow: hidden;
-
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-
-      padding: 18px 0;
-
-      white-space: nowrap;
-
-      background: var(--brown);
-    }
-
-    .marquee-track {
-      display: inline-block;
-
-      animation: marquee 25s linear infinite;
-
-      font-size: 12px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-
-      color: var(--beige);
-    }
-
-    @keyframes marquee {
-
-      from {
-        transform: translateX(0);
-      }
-
-      to {
-        transform: translateX(-50%);
-      }
-
-    }
-
-
-    /* =====================================================
-       SECTION
-    ===================================================== */
-
-    section {
-      padding: 100px 25px;
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: auto;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-
-      margin-bottom: 45px;
-
-      gap: 20px;
-    }
-
-    .section-title {
-      font-size: clamp(35px, 5vw, 60px);
-
-      line-height: 1;
-
-      letter-spacing: -2px;
-    }
-
-    .section-description {
-      max-width: 400px;
-
-      color: var(--muted);
-
-      font-size: 14px;
-    }
-
-
-    /* =====================================================
-       CATEGORY
-    ===================================================== */
-
-    .categories {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 15px;
-    }
-
-    .category {
-      height: 330px;
-
-      position: relative;
-
-      overflow: hidden;
-
-      background: var(--brown-dark);
-    }
-
-    .category img {
-      height: 100%;
-      object-fit: cover;
-
-      transition: transform 0.6s;
-    }
-
-    .category:hover img {
-      transform: scale(1.05);
-    }
-
-    .category-overlay {
-      position: absolute;
-
-      inset: 0;
-
-      display: flex;
-
-      align-items: end;
-
-      padding: 25px;
-
-      background:
-        linear-gradient(
-          transparent 35%,
-          rgba(36,19,14,0.9)
-        );
-    }
-
-    .category-title {
-      font-size: 20px;
-      letter-spacing: 1px;
-    }
-
-
-    /* =====================================================
-       PRODUCTS
-    ===================================================== */
-
-    .filters {
-      display: flex;
-
-      gap: 10px;
-
-      flex-wrap: wrap;
-
-      margin-bottom: 35px;
-    }
-
-    .filter-btn {
-      padding: 10px 18px;
-
-      border: 1px solid var(--border);
-
-      background: transparent;
-
-      color: var(--muted);
-
-      cursor: pointer;
-
-      font-size: 11px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.5px;
-    }
-
-    .filter-btn.active,
-    .filter-btn:hover {
-      background: var(--cream);
-      color: var(--brown-dark);
-    }
-
-    .products {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 18px;
-    }
-
-    .product {
-      position: relative;
-    }
-
-    .product-image {
-      aspect-ratio: 0.82;
-
-      background: var(--brown-dark);
-
-      overflow: hidden;
-
-      position: relative;
-    }
-
-    .product-image img {
-      height: 100%;
-      object-fit: cover;
-
-      transition: 0.5s;
-    }
-
-    .product:hover .product-image img {
-      transform: scale(1.04);
-    }
-
-    .product-tag {
-      position: absolute;
-
-      top: 12px;
-      left: 12px;
-
-      background: var(--cream);
-      color: var(--brown-dark);
-
-      padding: 7px 10px;
-
-      font-size: 9px;
-
-      font-weight: bold;
-
-      letter-spacing: 1px;
-    }
-
-    .product-info {
-      padding: 15px 0;
-    }
-
-    .product-name {
-      font-size: 14px;
-
-      margin-bottom: 5px;
-    }
-
-    .product-price {
-      color: var(--beige);
-
-      font-size: 14px;
-
-      font-weight: bold;
-    }
-
-    .product-category {
-      color: var(--muted);
-
-      font-size: 10px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-
-      margin-top: 5px;
-    }
-
-    .add-cart {
-      width: 100%;
-
-      padding: 11px;
-
-      margin-top: 12px;
-
-      border: 1px solid var(--border);
-
-      background: transparent;
-
-      color: var(--cream);
-
-      cursor: pointer;
-
-      font-size: 10px;
-
-      letter-spacing: 1.5px;
-
-      text-transform: uppercase;
-    }
-
-    .add-cart:hover {
-      background: var(--cream);
-      color: var(--brown-dark);
-    }
-
-
-    /* =====================================================
-       THE MOOD
-    ===================================================== */
-
-    .mood-section {
-      background: var(--brown-dark);
-    }
-
-    .mood-grid {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 70px;
-
-      align-items: center;
-    }
-
-    .mood-image {
-      min-height: 650px;
-
-      background:
-        url("https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1200&q=85")
-        center/cover;
-    }
-
-    .mood-text h2 {
-      font-size: clamp(45px, 6vw, 80px);
-
-      line-height: 0.95;
-
-      margin-bottom: 30px;
-    }
-
-    .mood-text h2 span {
-      color: var(--beige);
-    }
-
-    .mood-text p {
-      color: var(--muted);
-
-      max-width: 470px;
-
-      margin-bottom: 20px;
-    }
-
-    .quote {
-      border-left: 2px solid var(--beige);
-
-      padding-left: 20px;
-
-      margin-top: 35px;
-
-      font-size: 18px;
-
-      color: var(--cream);
-    }
-
-
-    /* =====================================================
-       ABOUT
-    ===================================================== */
-
-    .about {
-      text-align: center;
-    }
-
-    .about-content {
-      max-width: 800px;
-
-      margin: auto;
-    }
-
-    .about h2 {
-      font-size: clamp(45px, 7vw, 85px);
-
-      margin-bottom: 30px;
-    }
-
-    .about p {
-      color: var(--muted);
-
-      font-size: 17px;
-
-      margin-bottom: 20px;
-    }
-
-
-    /* =====================================================
-       NEWSLETTER
-    ===================================================== */
-
-    .newsletter {
-      background: var(--cream);
-
-      color: var(--brown-dark);
-
-      text-align: center;
-    }
-
-    .newsletter h2 {
-      font-size: clamp(35px, 5vw, 60px);
-
-      margin-bottom: 15px;
-    }
-
-    .newsletter p {
-      color: #725f50;
-
-      margin-bottom: 30px;
-    }
-
-    .newsletter-form {
-      display: flex;
-
-      max-width: 550px;
-
-      margin: auto;
-    }
-
-    .newsletter-form input {
-      flex: 1;
-
-      padding: 16px;
-
-      border: 1px solid #c5b4a3;
-
-      background: transparent;
-
-      outline: none;
-    }
-
-    .newsletter-form button {
-      padding: 16px 25px;
-
-      border: none;
-
-      background: var(--brown-dark);
-
-      color: var(--cream);
-
-      cursor: pointer;
-
-      font-weight: bold;
-
-      letter-spacing: 1px;
-    }
-
-
-    /* =====================================================
-       CONTACT
-    ===================================================== */
-
-    .contact-grid {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 50px;
-    }
-
-    .contact-info h2 {
-      font-size: 55px;
-
-      line-height: 1;
-
-      margin-bottom: 25px;
-    }
-
-    .contact-info p {
-      color: var(--muted);
-
-      max-width: 400px;
-    }
-
-    .contact-details {
-      margin-top: 35px;
-    }
-
-    .contact-details div {
-      margin-bottom: 15px;
-
-      color: var(--beige);
-    }
-
-    .contact-form {
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 15px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-
-      padding: 16px;
-
-      background: transparent;
-
-      border: 1px solid var(--border);
-
-      color: var(--cream);
-
-      outline: none;
-
-      font-family: inherit;
-    }
-
-    .contact-form textarea {
-      height: 150px;
-
-      resize: vertical;
-    }
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-
-    footer {
-      background: var(--brown-dark);
-
-      border-top: 1px solid var(--border);
-
-      padding: 60px 25px 25px;
-    }
-
-    .footer-grid {
-      max-width: var(--max-width);
-
-      margin: auto;
-
-      display: grid;
-
-      grid-template-columns:
-        2fr 1fr 1fr 1fr;
-
-      gap: 40px;
-    }
-
-    .footer-logo {
-      font-size: 30px;
-
-      font-weight: 900;
-
-      letter-spacing: 6px;
-
-      margin-bottom: 15px;
-    }
-
-    .footer-description {
-      color: var(--muted);
-
-      max-width: 300px;
-
-      font-size: 13px;
-    }
-
-    .footer-column h4 {
-      font-size: 11px;
-
-      text-transform: uppercase;
-
-      letter-spacing: 2px;
-
-      margin-bottom: 18px;
-    }
-
-    .footer-column a {
-      display: block;
-
-      color: var(--muted);
-
-      font-size: 13px;
-
-      margin-bottom: 10px;
-    }
-
-    .footer-column a:hover {
-      color: var(--cream);
-    }
-
-    .copyright {
-      max-width: var(--max-width);
-
-      margin: 50px auto 0;
-
-      padding-top: 20px;
-
-      border-top: 1px solid var(--border);
-
-      color: #917d6d;
-
-      font-size: 11px;
-    }
-
-
-    /* =====================================================
-       WHATSAPP
-    ===================================================== */
-
-    .whatsapp {
-      position: fixed;
-
-      right: 20px;
-      bottom: 20px;
-
-      width: 58px;
-      height: 58px;
-
-      border-radius: 50%;
-
-      background: #25D366;
-
-      color: white;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      font-size: 25px;
-
-      z-index: 999;
-
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.3);
-    }
-
-
-    /* =====================================================
-       CART
-    ===================================================== */
-
-    .cart-panel {
-      position: fixed;
-
-      top: 0;
-      right: -420px;
-
-      width: min(420px, 100%);
-
-      height: 100vh;
-
-      background: var(--cream);
-
-      color: var(--brown-dark);
-
-      z-index: 2000;
-
-      padding: 25px;
-
-      transition: 0.4s;
-
-      box-shadow:
-        -10px 0 40px rgba(0,0,0,0.3);
-    }
-
-    .cart-panel.open {
-      right: 0;
-    }
-
-    .cart-header {
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      padding-bottom: 20px;
-
-      border-bottom: 1px solid #d5c5b5;
-    }
-
-    .cart-header h2 {
-      font-size: 25px;
-    }
-
-    .close-cart {
-      border: none;
-
-      background: none;
-
-      font-size: 25px;
-
-      cursor: pointer;
-    }
-
-    .cart-items {
-      padding: 25px 0;
-
-      max-height: 65vh;
-
-      overflow-y: auto;
-    }
-
-    .cart-item {
-      display: flex;
-
-      justify-content: space-between;
-
-      gap: 15px;
-
-      border-bottom: 1px solid #ddd0c2;
-
-      padding: 15px 0;
-    }
-
-    .cart-item-name {
-      font-size: 14px;
-
-      font-weight: bold;
-    }
-
-    .cart-item-price {
-      font-size: 13px;
-
-      color: #765e4e;
-    }
-
-    .remove-item {
-      border: none;
-
-      background: none;
-
-      cursor: pointer;
-
-      color: #8a6655;
-
-      font-size: 12px;
-    }
-
-    .cart-total {
-      border-top: 1px solid #d5c5b5;
-
-      padding-top: 20px;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      font-weight: bold;
-
-      margin-bottom: 20px;
-    }
-
-    .checkout {
-      width: 100%;
-
-      padding: 16px;
-
-      border: none;
-
-      background: var(--brown-dark);
-
-      color: var(--cream);
-
-      cursor: pointer;
-
-      letter-spacing: 1px;
-
-      text-transform: uppercase;
-    }
-
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
-
-    @media (max-width: 900px) {
-
-      .menu {
-        position: fixed;
-
-        top: 76px;
-        left: 0;
-
-        width: 100%;
-
-        background: var(--brown-dark);
-
-        display: none;
-
-        flex-direction: column;
-
-        padding: 30px 25px;
-
-        border-bottom: 1px solid var(--border);
-      }
-
-      .menu.active {
-        display: flex;
-      }
-
-      .mobile-menu {
-        display: block;
-      }
-
-      .hero-container,
-      .mood-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-image {
-        min-height: 500px;
-      }
-
-      .categories {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-      .products {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-    }
-
-
-    @media (max-width: 550px) {
-
-      .nav {
-        padding: 0 18px;
-      }
-
-      .logo {
-        font-size: 23px;
-        letter-spacing: 4px;
-      }
-
-      section {
-        padding: 75px 18px;
-      }
-
-      .hero {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-
-      .hero h1 {
-        font-size: 58px;
-      }
-
-      .hero-image {
-        min-height: 430px;
-      }
-
-      .categories {
-        grid-template-columns: 1fr;
-      }
-
-      .category {
-        height: 380px;
-      }
-
-      .products {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-
-      .product-name {
-        font-size: 12px;
-      }
-
-      .product-price {
-        font-size: 12px;
-      }
-
-      .section-header {
-        display: block;
-      }
-
-      .section-description {
-        margin-top: 15px;
-      }
-
-      .mood-image {
-        min-height: 450px;
-      }
-
-      .newsletter-form {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-  </style>
+</style>
 </head>
 
 
 <body>
 
 
-  <!-- ===================================================
-       HEADER
-  ==================================================== -->
+<!-- ===================================================
+     HEADER
+==================================================== -->
 
-  <header>
+<header>
 
-    <nav class="nav">
+<nav class="nav">
 
-      <a href="#home" class="logo">
-        MOOD
-      </a>
+<a href="#home" class="logo">
+MOOD
+</a>
 
-      <ul class="menu" id="menu">
+<ul class="menu" id="menu">
 
-        <li>
-          <a href="#home">Home</a>
-        </li>
+<li><a href="#home">Home</a></li>
+<li><a href="#shop">Shop</a></li>
+<li><a href="#new-drop">New Drop</a></li>
+<li><a href="#colors">Colors</a></li>
+<li><a href="#mood">The Mood</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
 
-        <li>
-          <a href="#shop">Shop</a>
-        </li>
+</ul>
 
-        <li>
-          <a href="#new-drop">New Drop</a>
-        </li>
+<div class="nav-actions">
 
-        <li>
-          <a href="#mood">The Mood</a>
-        </li>
+<button class="icon-btn"
+onclick="scrollToShop()"
+aria-label="Pesquisar">
+⌕
+</button>
 
-        <li>
-          <a href="#about">About</a>
-        </li>
+<button class="icon-btn"
+onclick="openCart()"
+aria-label="Carrinho">
 
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+🛍
 
-      </ul>
+<span class="cart-count" id="cartCount">
+0
+</span>
 
+</button>
 
-      <div class="nav-actions">
+<button class="mobile-menu"
+onclick="toggleMenu()">
+☰
+</button>
 
-        <button
-          class="icon-btn"
-          onclick="scrollToShop()"
-          aria-label="Pesquisar">
-          ⌕
-        </button>
+</div>
 
-        <button
-          class="icon-btn"
-          onclick="openCart()"
-          aria-label="Carrinho">
+</nav>
 
-          🛍
+</header>
 
-          <span
-            class="cart-count"
-            id="cartCount">
-            0
-          </span>
 
-        </button>
+<!-- ===================================================
+     HERO
+==================================================== -->
 
-        <button
-          class="mobile-menu"
-          onclick="toggleMenu()">
+<main id="home">
 
-          ☰
+<section class="hero">
 
-        </button>
+<div class="hero-container">
 
-      </div>
+<div class="hero-text">
 
-    </nav>
+<div class="eyebrow">
+MOOD CORPORATION — ANGOLA
+</div>
 
-  </header>
+<h1>
 
+LESS
+<span>NOISE.</span>
 
-  <!-- ===================================================
-       HERO
-  ==================================================== -->
+MORE
+<span>MOOD.</span>
 
-  <main id="home">
+</h1>
 
-    <section class="hero">
+<p>
+Moda urbana premium para quem não precisa
+seguir o momento. Você cria o seu.
+</p>
 
-      <div class="hero-container">
+<a href="#shop" class="primary-btn">
+Ver coleção
+</a>
 
-        <div class="hero-text">
+<a href="#mood" class="secondary-btn">
+The Mood
+</a>
 
-          <div class="eyebrow">
-            MOOD CORPORATION — ANGOLA
-          </div>
+</div>
 
-          <h1>
 
-            LESS
-            <span>NOISE.</span>
+<div class="hero-image">
 
-            MORE
-            <span>MOOD.</span>
+<div class="hero-label">
+MOOD — NEW ERA
+</div>
 
-          </h1>
+</div>
 
-          <p>
-            Moda urbana premium para quem não precisa
-            seguir o momento. Você cria o seu.
-          </p>
+</div>
 
-          <a
-            href="#shop"
-            class="primary-btn">
+</section>
 
-            Ver coleção
 
-          </a>
+<!-- ===================================================
+     MARQUEE
+==================================================== -->
 
-          <a
-            href="#mood"
-            class="secondary-btn">
+<div class="marquee">
 
-            The Mood
+<div class="marquee-track">
 
-          </a>
+MOOD • LESS NOISE • MORE MOOD •
+MADE FOR YOUR MOMENT •
+MOOD • LESS NOISE • MORE MOOD •
+MADE FOR YOUR MOMENT •
 
-        </div>
+</div>
 
+</div>
 
-        <div class="hero-image">
 
-          <div class="hero-label">
-            MOOD — NEW ERA
-          </div>
+<!-- ===================================================
+     CATEGORIES
+==================================================== -->
 
-        </div>
+<section>
 
-      </div>
+<div class="container">
 
-    </section>
+<div class="section-header">
 
+<div>
 
-    <!-- ===================================================
-         MARQUEE
-    ==================================================== -->
+<div class="eyebrow">
+EXPLORE
+</div>
 
-    <div class="marquee">
+<h2 class="section-title">
+SHOP MOOD
+</h2>
 
-      <div class="marquee-track">
+</div>
 
-        MOOD • LESS NOISE • MORE MOOD •
-        MADE FOR YOUR MOMENT •
-        MOOD • LESS NOISE • MORE MOOD •
-        MADE FOR YOUR MOMENT •
+<p class="section-description">
+Descubra peças selecionadas para
+diferentes momentos da sua vida.
+</p>
 
-      </div>
+</div>
 
-    </div>
 
+<div class="categories">
 
-    <!-- ===================================================
-         CATEGORIES
-    ==================================================== -->
+<a href="#shop" class="category">
 
-    <section>
+<img
+src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
+alt="MOOD T-Shirts">
 
-      <div class="container">
+<div class="category-overlay">
+<div class="category-title">
+T-Shirts
+</div>
+</div>
 
-        <div class="section-header">
+</a>
 
-          <div>
 
-            <div class="eyebrow">
-              EXPLORE
-            </div>
+<a href="#shop" class="category">
 
-            <h2 class="section-title">
-              SHOP MOOD
-            </h2>
+<img
+src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85"
+alt="MOOD Bags">
 
-          </div>
+<div class="category-overlay">
+<div class="category-title">
+Bags
+</div>
+</div>
 
-          <p class="section-description">
-            Descubra peças selecionadas para
-            diferentes momentos da sua vida.
-          </p>
+</a>
 
-        </div>
 
+<a href="#shop" class="category">
 
-        <div class="categories">
+<img
+src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=85"
+alt="MOOD Caps">
 
+<div class="category-overlay">
+<div class="category-title">
+Caps
+</div>
+</div>
 
-          <a
-            href="#shop"
-            class="category">
+</a>
 
-            <img
-              src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
-              alt="MOOD T-Shirts">
 
-            <div class="category-overlay">
+<a href="#shop" class="category">
 
-              <div class="category-title">
-                T-Shirts
-              </div>
+<img
+src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=85"
+alt="MOOD Collections">
 
-            </div>
+<div class="category-overlay">
+<div class="category-title">
+Collections
+</div>
+</div>
 
-          </a>
+</a>
 
+</div>
 
-          <a
-            href="#shop"
-            class="category">
+</div>
 
-            <img
-              src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85"
-              alt="MOOD Bags">
+</section>
 
-            <div class="category-overlay">
 
-              <div class="category-title">
-                Bags
-              </div>
+<!-- ===================================================
+     MOOD COLOR EDIT
+==================================================== -->
 
-            </div>
+<section id="colors" class="color-section">
 
-          </a>
+<div class="container">
 
+<div class="section-header">
 
-          <a
-            href="#shop"
-            class="category">
+<div>
 
-            <img
-              src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=85"
-              alt="MOOD Caps">
+<div class="eyebrow">
+MOOD COLOR EDIT
+</div>
 
-            <div class="category-overlay">
+<h2 class="section-title">
+THE MOOD<br>
+PALETTE.
+</h2>
 
-              <div class="category-title">
-                Caps
-              </div>
+</div>
 
-            </div>
+<p class="section-description">
+Quatro cores que definem a linguagem
+visual da MOOD Corporation.
+</p>
 
-          </a>
+</div>
 
 
-          <a
-            href="#shop"
-            class="category">
+<div class="color-grid">
 
-            <img
-              src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=85"
-              alt="MOOD Collections">
 
-            <div class="category-overlay">
+<div class="color-image">
 
-              <div class="category-title">
-                Collections
-              </div>
+<!--
+  IMPORTANTE:
+  Coloque a imagem da paleta criada para a MOOD
+  nesta mesma pasta com o nome:
 
-            </div>
+  mood-paleta-premium.png
+-->
 
-          </a>
+<img
+src="mood-paleta-premium.png"
+alt="Paleta Premium de cores da MOOD Corporation">
 
-        </div>
+</div>
 
-      </div>
 
-    </section>
+<div class="color-content">
 
+<h2>
+COLORS<br>
+<span>THAT SPEAK.</span>
+</h2>
 
-    <!-- ===================================================
-         SHOP
-    ==================================================== -->
+<p>
+A MOOD não precisa de muitas cores.
+Precisamos das cores certas.
 
-    <section id="shop">
+A nossa paleta foi criada para transmitir
+presença, sofisticação, identidade e
+liberdade de expressão.
+</p>
 
-      <div class="container">
 
-        <div class="section-header">
+<div class="palette">
 
-          <div>
 
-            <div class="eyebrow">
-              SHOP
-            </div>
+<div class="palette-card">
 
-            <h2 class="section-title">
-              ESSENTIALS
-            </h2>
+<div class="swatch beige"></div>
 
-          </div>
+<div class="palette-name">
+Bege Areia
+</div>
 
-          <p class="section-description">
-            Peças essenciais da identidade MOOD.
-          </p>
+<div class="palette-code">
+#D9C2A6 — ELEGÂNCIA NATURAL
+</div>
 
-        </div>
+</div>
 
 
-        <div class="filters">
+<div class="palette-card">
 
-          <button
-            class="filter-btn active"
-            onclick="filterProducts('all', this)">
-            Todos
-          </button>
+<div class="swatch onyx"></div>
 
-          <button
-            class="filter-btn"
-            onclick="filterProducts('tshirt', this)">
-            T-Shirts
-          </button>
+<div class="palette-name">
+Preto Onyx
+</div>
 
-          <button
-            class="filter-btn"
-            onclick="filterProducts('bag', this)">
-            Bags
-          </button>
+<div class="palette-code">
+#0B0B0C — FORÇA & MINIMALISMO
+</div>
 
-          <button
-            class="filter-btn"
-            onclick="filterProducts('cap', this)">
-            Caps
-          </button>
+</div>
 
-        </div>
 
+<div class="palette-card">
 
-        <div class="products" id="productGrid">
+<div class="swatch wine"></div>
 
+<div class="palette-name">
+Vinho Stone
+</div>
 
-          <!-- PRODUCT 1 -->
+<div class="palette-code">
+#6B1F32 — LUXO URBANO
+</div>
 
-          <article
-            class="product"
-            data-category="tshirt">
+</div>
 
-            <div class="product-image">
 
-              <span class="product-tag">
-                NEW
-              </span>
+<div class="palette-card">
 
-              <img
-                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
-                alt="MOOD Heavy T-Shirt">
+<div class="swatch ocean"></div>
 
-            </div>
+<div class="palette-name">
+Azul Oceano
+</div>
 
-            <div class="product-info">
+<div class="palette-code">
+#124E68 — SOFISTICAÇÃO & LIBERDADE
+</div>
 
-              <div class="product-name">
-                MOOD Heavy T-Shirt
-              </div>
+</div>
 
-              <div class="product-category">
-                Stone
-              </div>
 
-              <div class="product-price">
-                12.500 Kz
-              </div>
+</div>
 
-              <button
-                class="add-cart"
-                onclick="addToCart('MOOD Heavy T-Shirt — Stone', 12500)">
-                Adicionar ao carrinho
-              </button>
+</div>
 
-            </div>
+</div>
 
-          </article>
+</div>
 
+</section>
 
-          <!-- PRODUCT 2 -->
 
-          <article
-            class="product"
-            data-category="tshirt">
+<!-- ===================================================
+     SHOP
+==================================================== -->
 
-            <div class="product-image">
+<section id="shop">
 
-              <span class="product-tag">
-                MOOD
-              </span>
+<div class="container">
 
-              <img
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=85"
-                alt="MOOD T-Shirt Black">
+<div class="section-header">
 
-            </div>
+<div>
 
-            <div class="product-info">
+<div class="eyebrow">
+SHOP
+</div>
 
-              <div class="product-name">
-                MOOD T-Shirt
-              </div>
+<h2 class="section-title">
+ESSENTIALS
+</h2>
 
-              <div class="product-category">
-                Black
-              </div>
+</div>
 
-              <div class="product-price">
-                12.500 Kz
-              </div>
+<p class="section-description">
+Peças essenciais da identidade MOOD.
+</p>
 
-              <button
-                class="add-cart"
-                onclick="addToCart('MOOD T-Shirt — Black', 12500)">
-                Adicionar ao carrinho
-              </button>
+</div>
 
-            </div>
 
-          </article>
+<div class="filters">
 
+<button
+class="filter-btn active"
+onclick="filterProducts('all',this)">
+Todos
+</button>
 
-          <!-- PRODUCT 3 -->
+<button
+class="filter-btn"
+onclick="filterProducts('tshirt',this)">
+T-Shirts
+</button>
 
-          <article
-            class="product"
-            data-category="bag">
+<button
+class="filter-btn"
+onclick="filterProducts('bag',this)">
+Bags
+</button>
 
-            <div class="product-image">
+<button
+class="filter-btn"
+onclick="filterProducts('cap',this)">
+Caps
+</button>
 
-              <img
-                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85"
-                alt="MOOD Bag">
+</div>
 
-            </div>
 
-            <div class="product-info">
+<div class="products" id="productGrid">
 
-              <div class="product-name">
-                MOOD Bag
-              </div>
 
-              <div class="product-category">
-                Beige
-              </div>
+<!-- PRODUCT 1 -->
 
-              <div class="product-price">
-                7.500 Kz
-              </div>
+<article class="product" data-category="tshirt">
 
-              <button
-                class="add-cart"
-                onclick="addToCart('MOOD Bag — Beige', 7500)">
-                Adicionar ao carrinho
-              </button>
+<div class="product-image">
 
-            </div>
+<span class="product-tag">
+NEW
+</span>
 
-          </article>
+<img
+src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
+alt="MOOD Heavy T-Shirt">
 
+</div>
 
-          <!-- PRODUCT 4 -->
+<div class="product-info">
 
-          <article
-            class="product"
-            data-category="cap">
+<div class="product-name">
+MOOD Heavy T-Shirt
+</div>
 
-            <div class="product-image">
+<div class="product-category">
+Stone
+</div>
 
-              <img
-                src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=85"
-                alt="MOOD Cap">
+<div class="product-price">
+12.500 Kz
+</div>
 
-            </div>
+<button
+class="add-cart"
+onclick="addToCart('MOOD Heavy T-Shirt — Stone',12500)">
+Adicionar ao carrinho
+</button>
 
-            <div class="product-info">
+</div>
 
-              <div class="product-name">
-                MOOD Cap
-              </div>
+</article>
 
-              <div class="product-category">
-                Brown
-              </div>
 
-              <div class="product-price">
-                8.500 Kz
-              </div>
+<!-- PRODUCT 2 -->
 
-              <button
-                class="add-cart"
-                onclick="addToCart('MOOD Cap — Brown', 8500)">
-                Adicionar ao carrinho
-              </button>
+<article class="product" data-category="tshirt">
 
-            </div>
+<div class="product-image">
 
-          </article>
+<span class="product-tag">
+MOOD
+</span>
 
+<img
+src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=85"
+alt="MOOD T-Shirt Black">
 
-        </div>
+</div>
 
-      </div>
+<div class="product-info">
 
-    </section>
+<div class="product-name">
+MOOD T-Shirt
+</div>
 
+<div class="product-category">
+Black
+</div>
 
-    <!-- ===================================================
-         NEW DROP
-    ==================================================== -->
+<div class="product-price">
+12.500 Kz
+</div>
 
-    <section
-      id="new-drop"
-      class="mood-section">
+<button
+class="add-cart"
+onclick="addToCart('MOOD T-Shirt — Black',12500)">
+Adicionar ao carrinho
+</button>
 
-      <div class="container">
+</div>
 
-        <div class="mood-grid">
+</article>
 
-          <div class="mood-image"></div>
 
+<!-- PRODUCT 3 -->
 
-          <div class="mood-text">
+<article class="product" data-category="bag">
 
-            <div class="eyebrow">
-              NEW DROP
-            </div>
+<div class="product-image">
 
-            <h2>
+<img
+src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85"
+alt="MOOD Bag">
 
-              THIS IS
-              <span>YOUR</span>
-              MOMENT.
+</div>
 
-            </h2>
+<div class="product-info">
 
-            <p>
-              Uma nova coleção está chegando.
-              Silhuetas simples, materiais fortes
-              e uma identidade que fala por si.
-            </p>
+<div class="product-name">
+MOOD Bag
+</div>
 
-            <p>
-              MOOD não foi criada para preencher
-              o seu guarda-roupa.
-              Foi criada para representar você.
-            </p>
+<div class="product-category">
+Beige
+</div>
 
-            <div class="quote">
+<div class="product-price">
+7.500 Kz
+</div>
 
-              “Feito para quem vive o seu momento.”
+<button
+class="add-cart"
+onclick="addToCart('MOOD Bag — Beige',7500)">
+Adicionar ao carrinho
+</button>
 
-            </div>
+</div>
 
-          </div>
+</article>
 
-        </div>
 
-      </div>
+<!-- PRODUCT 4 -->
 
-    </section>
+<article class="product" data-category="cap">
 
+<div class="product-image">
 
-    <!-- ===================================================
-         THE MOOD
-    ==================================================== -->
+<img
+src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=85"
+alt="MOOD Cap">
 
-    <section id="mood">
+</div>
 
-      <div class="container about">
+<div class="product-info">
 
-        <div class="about-content">
+<div class="product-name">
+MOOD Cap
+</div>
 
-          <div class="eyebrow">
-            THE MOOD
-          </div>
+<div class="product-category">
+Brown
+</div>
 
-          <h2>
-            WE ARE<br>
-            <span style="color: var(--beige);">
-              MOOD.
-            </span>
-          </h2>
+<div class="product-price">
+8.500 Kz
+</div>
 
-          <p>
-            MOOD é mais do que roupa.
-            É atitude, presença e expressão.
-          </p>
+<button
+class="add-cart"
+onclick="addToCart('MOOD Cap — Brown',8500)">
+Adicionar ao carrinho
+</button>
 
-          <p>
-            Nascemos em Angola para construir
-            uma marca que representa pessoas
-            que vivem o próprio momento.
-          </p>
+</div>
 
-          <p>
-            Menos barulho.
-            Mais identidade.
-          </p>
+</article>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
-    </section>
+</section>
 
 
-    <!-- ===================================================
-         ABOUT
-    ==================================================== -->
+<!-- ===================================================
+     NEW DROP
+==================================================== -->
 
-    <section
-      id="about"
-      class="mood-section">
+<section id="new-drop" class="mood-section">
 
-      <div class="container">
+<div class="container">
 
-        <div class="section-header">
+<div class="mood-grid">
 
-          <div>
+<div class="mood-image"></div>
 
-            <div class="eyebrow">
-              OUR STORY
-            </div>
 
-            <h2 class="section-title">
-              FROM<br>
-              ANGOLA.
-            </h2>
+<div class="mood-text">
 
-          </div>
+<div class="eyebrow">
+NEW DROP
+</div>
 
-          <p class="section-description">
+<h2>
+THIS IS
+<span>YOUR</span>
+MOMENT.
+</h2>
 
-            MOOD Corporation nasce com uma visão:
-            transformar moda em identidade.
+<p>
+Uma nova coleção está chegando.
+Silhuetas simples, materiais fortes
+e uma identidade que fala por si.
+</p>
 
-          </p>
+<p>
+MOOD não foi criada para preencher
+o seu guarda-roupa.
+Foi criada para representar você.
+</p>
 
-        </div>
+<div class="quote">
+“Feito para quem vive o seu momento.”
+</div>
 
+</div>
 
-        <div class="about-content">
+</div>
 
-          <p>
-            Começamos pequenos.
-            Mas pensamos grande.
-          </p>
+</div>
 
-          <p>
-            Cada peça representa uma escolha:
-            escolher quem você é em vez de
-            simplesmente seguir aquilo que todos
-            estão fazendo.
-          </p>
+</section>
 
-          <br>
 
-          <p>
-            <strong>
-              LESS NOISE. MORE MOOD.
-            </strong>
-          </p>
+<!-- ===================================================
+     THE MOOD
+==================================================== -->
 
-        </div>
+<section id="mood">
 
-      </div>
+<div class="container about">
 
-    </section>
+<div class="about-content">
 
+<div class="eyebrow">
+THE MOOD
+</div>
 
-    <!-- ===================================================
-         NEWSLETTER
-    ==================================================== -->
+<h2>
+WE ARE<br>
+<span style="color:var(--beige);">
+MOOD.
+</span>
+</h2>
 
-    <section class="newsletter">
+<p>
+MOOD é mais do que roupa.
+É atitude, presença e expressão.
+</p>
 
-      <div class="container">
+<p>
+Nascemos em Angola para construir
+uma marca que representa pessoas
+que vivem o próprio momento.
+</p>
 
-        <h2>
-          ENTER THE MOOD.
-        </h2>
+<p>
+Menos barulho.
+Mais identidade.
+</p>
 
-        <p>
-          Receba novidades sobre novos drops
-          e coleções da MOOD.
-        </p>
+</div>
 
+</div>
 
-        <form
-          class="newsletter-form"
-          onsubmit="subscribe(event)">
+</section>
 
-          <input
-            type="email"
-            placeholder="Seu melhor email"
-            required>
 
-          <button type="submit">
-            Entrar
-          </button>
+<!-- ===================================================
+     ABOUT
+==================================================== -->
 
-        </form>
+<section id="about" class="mood-section">
 
-      </div>
+<div class="container">
 
-    </section>
+<div class="section-header">
 
+<div>
 
-    <!-- ===================================================
-         CONTACT
-    ==================================================== -->
+<div class="eyebrow">
+OUR STORY
+</div>
 
-    <section id="contact">
+<h2 class="section-title">
+FROM<br>
+ANGOLA.
+</h2>
 
-      <div class="container">
+</div>
 
-        <div class="contact-grid">
+<p class="section-description">
+MOOD Corporation nasce com uma visão:
+transformar moda em identidade.
+</p>
 
+</div>
 
-          <div class="contact-info">
 
-            <div class="eyebrow">
-              CONTACT
-            </div>
+<div class="about-content">
 
-            <h2>
-              LET'S<br>
-              TALK.
-            </h2>
+<p>
+Começamos pequenos.
+Mas pensamos grande.
+</p>
 
-            <p>
-              Quer saber mais sobre a MOOD,
-              produtos ou próximos lançamentos?
-              Fale conosco.
-            </p>
+<p>
+Cada peça representa uma escolha:
+escolher quem você é em vez de
+simplesmente seguir aquilo que todos
+estão fazendo.
+</p>
 
-            <div class="contact-details">
+<br>
 
-              <div>
-                WhatsApp: 939 154 755
-              </div>
+<p>
+<strong>
+LESS NOISE. MORE MOOD.
+</strong>
+</p>
 
-              <div>
-                Angola — Luanda
-              </div>
+</div>
 
-              <div>
-                Instagram: @mood
-              </div>
+</div>
 
-            </div>
+</section>
 
-          </div>
 
+<!-- ===================================================
+     NEWSLETTER
+==================================================== -->
 
-          <form
-            class="contact-form"
-            onsubmit="sendMessage(event)">
+<section class="newsletter">
 
-            <input
-              type="text"
-              placeholder="Nome"
-              required>
+<div class="container">
 
-            <input
-              type="email"
-              placeholder="Email"
-              required>
+<h2>
+ENTER THE MOOD.
+</h2>
 
-            <textarea
-              placeholder="Mensagem"
-              required></textarea>
+<p>
+Receba novidades sobre novos drops
+e coleções da MOOD.
+</p>
 
-            <button
-              class="primary-btn"
-              type="submit">
+<form
+class="newsletter-form"
+onsubmit="subscribe(event)">
 
-              Enviar mensagem
+<input
+type="email"
+placeholder="Seu melhor email"
+required>
 
-            </button>
+<button type="submit">
+Entrar
+</button>
 
-          </form>
+</form>
 
-        </div>
+</div>
 
-      </div>
+</section>
 
-    </section>
 
-  </main>
+<!-- ===================================================
+     CONTACT
+==================================================== -->
 
+<section id="contact">
 
-  <!-- ===================================================
-       FOOTER
-  ==================================================== -->
+<div class="container">
 
-  <footer>
+<div class="contact-grid">
 
-    <div class="footer-grid">
 
+<div class="contact-info">
 
-      <div>
+<div class="eyebrow">
+CONTACT
+</div>
 
-        <div class="footer-logo">
-          MOOD
-        </div>
+<h2>
+LET'S<br>
+TALK.
+</h2>
 
-        <p class="footer-description">
-          Less Noise. More Mood.
-          Moda urbana premium criada
-          em Angola.
-        </p>
+<p>
+Quer saber mais sobre a MOOD,
+produtos ou próximos lançamentos?
+Fale conosco.
+</p>
 
-      </div>
+<div class="contact-details">
 
+<div>
+WhatsApp: 939 154 755
+</div>
 
-      <div class="footer-column">
+<div>
+Angola — Luanda
+</div>
 
-        <h4>
-          Shop
-        </h4>
+<div>
+Instagram: @mood
+</div>
 
-        <a href="#shop">
-          T-Shirts
-        </a>
+</div>
 
-        <a href="#shop">
-          Bags
-        </a>
+</div>
 
-        <a href="#shop">
-          Caps
-        </a>
 
-        <a href="#new-drop">
-          New Drop
-        </a>
+<form
+class="contact-form"
+onsubmit="sendMessage(event)">
 
-      </div>
+<input
+type="text"
+placeholder="Nome"
+required>
 
+<input
+type="email"
+placeholder="Email"
+required>
 
-      <div class="footer-column">
+<textarea
+placeholder="Mensagem"
+required></textarea>
 
-        <h4>
-          MOOD
-        </h4>
+<button
+class="primary-btn"
+type="submit">
 
-        <a href="#mood">
-          The Mood
-        </a>
+Enviar mensagem
 
-        <a href="#about">
-          About
-        </a>
+</button>
 
-        <a href="#contact">
-          Contact
-        </a>
+</form>
 
-      </div>
+</div>
 
+</div>
 
-      <div class="footer-column">
+</section>
 
-        <h4>
-          Social
-        </h4>
+</main>
 
-        <a href="#">
-          Instagram
-        </a>
 
-        <a href="#">
-          Facebook
-        </a>
+<!-- ===================================================
+     FOOTER
+==================================================== -->
 
-        <a href="#">
-          TikTok
-        </a>
+<footer>
 
-      </div>
+<div class="footer-grid">
 
-    </div>
 
+<div>
 
-    <div class="copyright">
+<div class="footer-logo">
+MOOD
+</div>
 
-      © 2026 MOOD Corporation.
-      Todos os direitos reservados.
+<p class="footer-description">
+Less Noise. More Mood.
+Moda urbana premium criada
+em Angola.
+</p>
 
-    </div>
+</div>
 
-  </footer>
 
+<div class="footer-column">
 
-  <!-- ===================================================
-       WHATSAPP
-  ==================================================== -->
+<h4>
+Shop
+</h4>
 
-  <a
-    class="whatsapp"
-    href="https://wa.me/244939154755"
-    target="_blank"
-    aria-label="WhatsApp">
+<a href="#shop">T-Shirts</a>
+<a href="#shop">Bags</a>
+<a href="#shop">Caps</a>
+<a href="#new-drop">New Drop</a>
 
-    ☎
+</div>
 
-  </a>
 
+<div class="footer-column">
 
-  <!-- ===================================================
-       CART
-  ==================================================== -->
+<h4>
+MOOD
+</h4>
 
-  <div
-    class="cart-panel"
-    id="cartPanel">
+<a href="#colors">Colors</a>
+<a href="#mood">The Mood</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 
+</div>
 
-    <div class="cart-header">
 
-      <h2>
-        Seu Carrinho
-      </h2>
+<div class="footer-column">
 
-      <button
-        class="close-cart"
-        onclick="closeCart()">
+<h4>
+Social
+</h4>
 
-        ×
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">TikTok</a>
 
-      </button>
+</div>
 
-    </div>
+</div>
 
 
-    <div
-      class="cart-items"
-      id="cartItems">
+<div class="copyright">
 
-      <p>
-        Seu carrinho está vazio.
-      </p>
+© 2026 MOOD Corporation.
+Todos os direitos reservados.
 
-    </div>
+</div>
 
+</footer>
 
-    <div class="cart-total">
 
-      <span>
-        Total
-      </span>
+<!-- ===================================================
+     WHATSAPP
+==================================================== -->
 
-      <span id="cartTotal">
-        0 Kz
-      </span>
+<a
+class="whatsapp"
+href="https://wa.me/244939154755"
+target="_blank"
+aria-label="WhatsApp">
 
-    </div>
+☎
 
+</a>
 
-    <button
-      class="checkout"
-      onclick="checkoutWhatsApp()">
 
-      Finalizar pelo WhatsApp
+<!-- ===================================================
+     CART
+==================================================== -->
 
-    </button>
+<div
+class="cart-panel"
+id="cartPanel">
 
-  </div>
+<div class="cart-header">
 
+<h2>
+Seu Carrinho
+</h2>
 
-  <!-- ===================================================
-       JAVASCRIPT
-  ==================================================== -->
+<button
+class="close-cart"
+onclick="closeCart()">
+×
+</button>
 
-  <script>
+</div>
 
-    /* =====================================================
-       MOBILE MENU
-    ===================================================== */
 
-    function toggleMenu() {
+<div
+class="cart-items"
+id="cartItems">
 
-      document
-        .getElementById("menu")
-        .classList
-        .toggle("active");
+<p>
+Seu carrinho está vazio.
+</p>
 
-    }
+</div>
 
 
-    document
-      .querySelectorAll(".menu a")
-      .forEach(function(link) {
+<div class="cart-total">
 
-        link.addEventListener("click", function() {
+<span>
+Total
+</span>
 
-          document
-            .getElementById("menu")
-            .classList
-            .remove("active");
+<span id="cartTotal">
+0 Kz
+</span>
 
-        });
+</div>
 
-      });
 
+<button
+class="checkout"
+onclick="checkoutWhatsApp()">
 
-    /* =====================================================
-       SCROLL SHOP
-    ===================================================== */
+Finalizar pelo WhatsApp
 
-    function scrollToShop() {
+</button>
 
-      document
-        .getElementById("shop")
-        .scrollIntoView({
-          behavior: "smooth"
-        });
+</div>
 
-    }
 
+<!-- ===================================================
+     JAVASCRIPT
+==================================================== -->
 
-    /* =====================================================
-       PRODUCT FILTER
-    ===================================================== */
+<script>
 
-    function filterProducts(category, button) {
+/* MOBILE MENU */
 
-      const products =
-        document.querySelectorAll(".product");
+function toggleMenu(){
 
-      const buttons =
-        document.querySelectorAll(".filter-btn");
+document
+.getElementById("menu")
+.classList
+.toggle("active");
 
+}
 
-      buttons.forEach(function(btn) {
+document
+.querySelectorAll(".menu a")
+.forEach(function(link){
 
-        btn.classList.remove("active");
+link.addEventListener("click",function(){
 
-      });
+document
+.getElementById("menu")
+.classList
+.remove("active");
 
+});
 
-      button.classList.add("active");
+});
 
 
-      products.forEach(function(product) {
+/* SCROLL SHOP */
 
-        if (
-          category === "all" ||
-          product.dataset.category === category
-        ) {
+function scrollToShop(){
 
-          product.style.display = "";
+document
+.getElementById("shop")
+.scrollIntoView({
+behavior:"smooth"
+});
 
-        } else {
+}
 
-          product.style.display = "none";
 
-        }
+/* PRODUCT FILTER */
 
-      });
+function filterProducts(category,button){
 
-    }
+const products=
+document.querySelectorAll(".product");
 
+const buttons=
+document.querySelectorAll(".filter-btn");
 
-    /* =====================================================
-       CART
-    ===================================================== */
+buttons.forEach(function(btn){
+btn.classList.remove("active");
+});
 
-    let cart = [];
+button.classList.add("active");
 
+products.forEach(function(product){
 
-    function addToCart(name, price) {
+if(
+category==="all" ||
+product.dataset.category===category
+){
 
-      cart.push({
-        name: name,
-        price: price
-      });
+product.style.display="";
 
+}else{
 
-      updateCart();
+product.style.display="none";
 
-      openCart();
+}
 
-    }
+});
 
+}
 
-    function updateCart() {
 
-      const cartItems =
-        document.getElementById("cartItems");
+/* CART */
 
-      const cartCount =
-        document.getElementById("cartCount");
+let cart=[];
 
-      const cartTotal =
-        document.getElementById("cartTotal");
 
+function addToCart(name,price){
 
-      cartCount.textContent = cart.length;
+cart.push({
+name:name,
+price:price
+});
 
+updateCart();
+openCart();
 
-      if (cart.length === 0) {
+}
 
-        cartItems.innerHTML =
-          "<p>Seu carrinho está vazio.</p>";
 
-        cartTotal.textContent = "0 Kz";
+function updateCart(){
 
-        return;
+const cartItems=
+document.getElementById("cartItems");
 
-      }
+const cartCount=
+document.getElementById("cartCount");
 
+const cartTotal=
+document.getElementById("cartTotal");
 
-      let total = 0;
+cartCount.textContent=cart.length;
 
 
-      cartItems.innerHTML = "";
+if(cart.length===0){
 
+cartItems.innerHTML=
+"<p>Seu carrinho está vazio.</p>";
 
-      cart.forEach(function(item, index) {
+cartTotal.textContent="0 Kz";
 
-        total += item.price;
+return;
 
+}
 
-        const div =
-          document.createElement("div");
+let total=0;
 
-        div.className = "cart-item";
+cartItems.innerHTML="";
 
 
-        div.innerHTML = `
+cart.forEach(function(item,index){
 
-          <div>
+total+=item.price;
 
-            <div class="cart-item-name">
-              ${item.name}
-            </div>
+const div=
+document.createElement("div");
 
-            <div class="cart-item-price">
-              ${item.price.toLocaleString("pt-AO")} Kz
-            </div>
+div.className="cart-item";
 
-          </div>
+div.innerHTML=`
 
-          <button
-            class="remove-item"
-            onclick="removeItem(${index})">
+<div>
 
-            Remover
+<div class="cart-item-name">
+${item.name}
+</div>
 
-          </button>
+<div class="cart-item-price">
+${item.price.toLocaleString("pt-AO")} Kz
+</div>
 
-        `;
+</div>
 
+<button
+class="remove-item"
+onclick="removeItem(${index})">
 
-        cartItems.appendChild(div);
+Remover
 
-      });
+</button>
 
+`;
 
-      cartTotal.textContent =
-        total.toLocaleString("pt-AO") + " Kz";
+cartItems.appendChild(div);
 
-    }
+});
 
 
-    function removeItem(index) {
+cartTotal.textContent=
+total.toLocaleString("pt-AO")+" Kz";
 
-      cart.splice(index, 1);
+}
 
-      updateCart();
 
-    }
+function removeItem(index){
 
+cart.splice(index,1);
+updateCart();
 
-    function openCart() {
+}
 
-      document
-        .getElementById("cartPanel")
-        .classList
-        .add("open");
 
-    }
+function openCart(){
 
+document
+.getElementById("cartPanel")
+.classList
+.add("open");
 
-    function closeCart() {
+}
 
-      document
-        .getElementById("cartPanel")
-        .classList
-        .remove("open");
 
-    }
+function closeCart(){
 
+document
+.getElementById("cartPanel")
+.classList
+.remove("open");
 
-    /* =====================================================
-       CHECKOUT WHATSAPP
-    ===================================================== */
+}
 
-    function checkoutWhatsApp() {
 
-      if (cart.length === 0) {
+/* CHECKOUT WHATSAPP */
 
-        alert(
-          "Adicione pelo menos um produto ao carrinho."
-        );
+function checkoutWhatsApp(){
 
-        return;
+if(cart.length===0){
 
-      }
+alert(
+"Adicione pelo menos um produto ao carrinho."
+);
 
+return;
 
-      let message =
-        "Olá MOOD Corporation! Quero fazer um pedido:%0A%0A";
+}
 
+let message=
+"Olá MOOD Corporation! Quero fazer um pedido:%0A%0A";
 
-      let total = 0;
+let total=0;
 
 
-      cart.forEach(function(item) {
+cart.forEach(function(item){
 
-        message +=
-          "• " +
-          item.name +
-          " — " +
-          item.price.toLocaleString("pt-AO") +
-          " Kz%0A";
+message+=
+"• "+
+item.name+
+" — "+
+item.price.toLocaleString("pt-AO")+
+" Kz%0A";
 
-        total += item.price;
+total+=item.price;
 
-      });
+});
 
 
-      message +=
-        "%0A*Total: " +
-        total.toLocaleString("pt-AO") +
-        " Kz*";
+message+=
+"%0A*Total: "+
+total.toLocaleString("pt-AO")+
+" Kz*";
 
 
-      window.open(
-        "https://wa.me/244939154755?text=" + message,
-        "_blank"
-      );
+window.open(
+"https://wa.me/244939154755?text="+message,
+"_blank"
+);
 
-    }
+}
 
 
-    /* =====================================================
-       NEWSLETTER
-    ===================================================== */
+/* NEWSLETTER */
 
-    function subscribe(event) {
+function subscribe(event){
 
-      event.preventDefault();
+event.preventDefault();
 
-      alert(
-        "Bem-vindo à MOOD. Você entrou para a nossa lista."
-      );
+alert(
+"Bem-vindo à MOOD. Você entrou para a nossa lista."
+);
 
-      event.target.reset();
+event.target.reset();
 
-    }
+}
 
 
-    /* =====================================================
-       CONTACT FORM
-    ===================================================== */
+/* CONTACT FORM */
 
-    function sendMessage(event) {
+function sendMessage(event){
 
-      event.preventDefault();
+event.preventDefault();
 
-      alert(
-        "Mensagem preparada. Em breve vamos ligar esta área ao WhatsApp."
-      );
+alert(
+"Mensagem preparada. Em breve vamos ligar esta área ao WhatsApp."
+);
 
-      event.target.reset();
+event.target.reset();
 
-    }
+}
 
-  </script>
-
+</script>
 
 </body>
 </html>
